@@ -1,0 +1,33 @@
+.layout-premium {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  gap: 25px;
+  width: 100%;
+}
+
+.center-feed-premium {
+  flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When no right sidebar → expand center content */
+.center-feed-premium.expanded {
+  max-width: none;
+}
+
+/* When no right sidebar → layout pushes center wider */
+.layout-premium.no-right-sidebar {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .layout-premium {
+    padding: 12px;
+    gap: 12px;
+  }
+}
