@@ -1,0 +1,245 @@
+/* =============================================
+   CHAT POPUP — Fixed bottom-right mini chat
+============================================= */
+.chat-popup-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 340px;
+  height: 420px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chat-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #E88DB5, #B7EBD6);
+  color: white;
+}
+
+.chat-popup-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.chat-popup-name {
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.chat-popup-close {
+  font-size: 24px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.chat-popup-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.chat-popup-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  background: #f9f9f9;
+}
+
+.popup-msg {
+  padding: 8px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+  width: fit-content;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.popup-msg-right {
+  background: #E88DB5;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.popup-msg-left {
+  background: #e8e8e8;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-popup-input {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-top: 1px solid #eee;
+  background: white;
+  gap: 8px;
+}
+
+.chat-popup-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chat-popup-input input:focus {
+  border-color: #B7EBD6;
+  box-shadow: 0 0 0 2px rgba(183,235,214,0.3);
+}
+
+.chat-popup-attach-btn, .chat-popup-send-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  flex-shrink: 0;
+  color: white;
+}
+
+.chat-popup-attach-btn { background: #e8f5f0; color: #66b596; }
+.chat-popup-attach-btn:hover { background: #B7EBD6; color: #1c523d; transform: scale(1.05); }
+
+.chat-popup-send-btn { background: #E88DB5; }
+.chat-popup-send-btn:hover { background: #d0749c; transform: scale(1.05); }
+.chat-popup-send-btn:disabled { background: #eee; color: #aaa; cursor: not-allowed; transform: none; }
+
+/* Media in popup */
+.popup-media {
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.popup-media:hover {
+  opacity: 0.85;
+}
+
+/* Video wrapper in popup */
+.popup-video-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.popup-video-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px; height: 36px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.popup-video-wrap:hover .popup-video-play {
+  opacity: 0;
+}
+
+.popup-video-fullscreen {
+  position: absolute;
+  bottom: 6px; right: 6px;
+  width: 26px; height: 26px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 5;
+}
+
+.popup-video-wrap:hover .popup-video-fullscreen {
+  opacity: 1;
+}
+
+.popup-video-fullscreen:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* POPUP LIGHTBOX — fullscreen overlay (same as /chat) */
+.popup-lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.popup-lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  object-fit: contain;
+  cursor: default;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+.popup-lightbox-video {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 8px;
+  cursor: default;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+.popup-lightbox-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 1000000;
+  width: 50px; height: 50px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  transition: 0.2s;
+}
+
+.popup-lightbox-close:hover {
+  background: rgba(255,255,255,0.25);
+}
