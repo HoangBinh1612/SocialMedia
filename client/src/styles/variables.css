@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Primary colors - giữ đúng giao diện cũ */
+  --primary-pink: #E88DB5;
+  --primary-green: #4DB49F;
+  --primary-light-green: #B7EBD6;
+  --primary-dark: #2D3748;
+  --primary-darker: #1A202C;
+  
+  /* Neutral */
+  --bg-primary: #F7FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #EDF2F7;
+  --bg-dark: #1A202C;
+  --bg-card: #FFFFFF;
+  
+  /* Text */
+  --text-primary: #2D3748;
+  --text-secondary: #718096;
+  --text-light: #A0AEC0;
+  --text-white: #FFFFFF;
+  
+  /* Accent */
+  --accent-blue: #4299E1;
+  --accent-red: #FC8181;
+  --accent-yellow: #F6E05E;
+  --accent-purple: #9F7AEA;
+  
+  /* Borders */
+  --border-color: #E2E8F0;
+  --border-light: #EDF2F7;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
+  
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Sidebar */
+  --sidebar-width: 260px;
+  --navbar-height: 64px;
+  
+  /* Font */
+  --font-family: 'Poppins', sans-serif;
+}

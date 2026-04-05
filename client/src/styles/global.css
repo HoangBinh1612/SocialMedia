@@ -1,0 +1,160 @@
+/* =============================================
+   GUMMY SOCIAL — GLOBAL STYLES
+   Matches original HTML/CSS design exactly
+============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --gummy-pink: #E88DB5;
+  --gummy-mint: #B7EBD6;
+  --gummy-yellow: #F9E79F;
+  --gummy-purple: #A67E9B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F7F7F7;
+  color: #333;
+}
+
+a { text-decoration: none; color: var(--gummy-purple); }
+
+/* =============================================
+   GLOBAL COMPONENTS
+============================================= */
+.avatar-large {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =============================================
+   REGISTER PAGE
+============================================= */
+.gummy-register-box {
+  width: 450px;
+  background: white;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+  animation: fadeInOld 0.6s ease;
+}
+
+.gummy-logo {
+  font-size: 55px;
+  font-weight: 700;
+  text-align: center;
+  color: #E88DB5;
+  margin-bottom: 10px;
+}
+
+.sub {
+  text-align: center;
+  color: #A67E9B;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.g-input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  background: white;
+  font-size: 15px;
+  color: #555;
+  transition: 0.25s;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.g-input:focus {
+  border-color: #B7EBD6;
+  box-shadow: 0 0 0 3px rgba(183,235,214,0.45);
+  outline: none;
+}
+
+.g-input.single { margin-bottom: 15px; }
+
+.gummy-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #B7EBD6;
+  color: #3f5f56;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gummy-btn:hover:not(:disabled) {
+  background: #AEE4CD;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+.gummy-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.g-login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.g-login-link a {
+  color: #A67E9B;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.g-login-link a:hover { color: #8f6e89; }
+
+/* =============================================
+   GLOBAL BUTTON STYLES
+============================================= */
+.btn-premium {
+  width: 100%;
+  padding: 14px;
+  background: var(--gummy-mint);
+  color: #3f5f56;
+  border-radius: 12px;
+  border: none;
+  margin-top: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-premium:hover { background: #AEE4CD; }
+
+/* =============================================
+   ANIMATION
+============================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+   SKELETON LOADING
+============================================= */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

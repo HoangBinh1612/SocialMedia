@@ -1,0 +1,20 @@
+.notification-panel {
+  width: 380px; max-height: 500px; background: white;
+  border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+.notif-header { padding: 15px 20px; border-bottom: 1px solid #eee; background: #B7EBD6; }
+.notif-header h3 { margin: 0; font-size: 18px; color: #A67E9B; }
+.notif-list { max-height: 420px; overflow-y: auto; }
+.notif-item {
+  padding: 15px 20px; border-bottom: 1px solid #f0f0f0;
+  cursor: pointer; transition: background 0.3s;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.notif-item:hover { background: #f8f8f8; }
+.notif-item.unread { background: #f0f7ff; }
+.notif-avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.notif-content { flex: 1; }
+.notif-message { font-size: 14px; color: #333; margin-bottom: 5px; line-height: 1.4; }
+.notif-time { font-size: 12px; color: #999; }
+.notif-empty { padding: 40px 20px; text-align: center; color: #999; }

@@ -1,0 +1,23 @@
+.friends-page-old { display: flex; gap: 25px; width: 100%; }
+.friends-center { flex: 1; }
+.friends-right { width: 260px; flex-shrink: 0; }
+
+.friends-card { background: white; border-radius: 18px; padding: 20px; margin-bottom: 25px; box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.friends-title { font-size: 20px; font-weight: 700; color: #E88DB5; margin-bottom: 15px; }
+
+.friend-item { display: flex; gap: 15px; padding: 12px; border-radius: 12px; transition: 0.25s; cursor: pointer; align-items: center; }
+.friend-item:hover { background: #f5f5f5; }
+.friend-avatar { width: 70px; height: 70px; border-radius: 14px; object-fit: cover; }
+.friend-info { display: flex; flex-direction: column; justify-content: center; font-size: 15px; }
+.friend-name-link { text-decoration: none; color: inherit; }
+.friend-name-link:hover .friend-name { color: #E88DB5; }
+.friend-name { font-weight: 700; margin-bottom: 4px; transition: 0.2s; }
+.friend-btn { padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; margin-right: 8px; margin-top: 6px; font-size: 14px; font-weight: 600; font-family: 'Poppins', sans-serif; min-width: 110px; text-align: center; }
+.btn-confirm { background: #B7EBD6; }
+.btn-confirm:hover { background: #AEE4CD; }
+.btn-delete { background: #eee; }
+.btn-delete:hover { background: #ddd; }
+.btn-add { background: #E88DB5; color: white; }
+.btn-add:hover { background: #d77ca5; }
+
+@media (max-width: 992px) { .friends-right { display: none; } .friends-page-old { flex-direction: column; } }
